@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0611.2007                               -->
+<datasource formatted-name='federated.0a01cod1oxl83l1f5yves1cfciqo' inline='true' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <connection class='federated'>
+    <named-connections>
+      <named-connection caption='Sales Commission' name='textscan.0bdqfzt0f0ynar1egmoso1fglwo7'>
+        <connection class='textscan' directory='/Users/arjun/Downloads/Sales Commission.tds Files/Data/Superstore' filename='Sales Commission.csv' password='' server='' />
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0bdqfzt0f0ynar1egmoso1fglwo7' name='Sales Commission.csv' table='[Sales Commission#csv]' type='table'>
+      <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+        <column datatype='datetime' name='Order Date' ordinal='0' />
+        <column datatype='string' name='Region' ordinal='1' />
+        <column datatype='string' name='Sales Person' ordinal='2' />
+        <column datatype='integer' name='Sales' ordinal='3' />
+      </columns>
+    </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0bdqfzt0f0ynar1egmoso1fglwo7' name='Sales Commission.csv' table='[Sales Commission#csv]' type='table'>
+      <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+        <column datatype='datetime' name='Order Date' ordinal='0' />
+        <column datatype='string' name='Region' ordinal='1' />
+        <column datatype='string' name='Sales Person' ordinal='2' />
+        <column datatype='integer' name='Sales' ordinal='3' />
+      </columns>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+    <metadata-records>
+      <metadata-record class='capability'>
+        <remote-name />
+        <remote-type>0</remote-type>
+        <parent-name>[Sales Commission.csv]</parent-name>
+        <remote-alias />
+        <aggregation>Count</aggregation>
+        <contains-null>true</contains-null>
+        <attributes>
+          <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+          <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+          <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+          <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+          <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+          <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+        </attributes>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Order Date</remote-name>
+        <remote-type>135</remote-type>
+        <local-name>[Order Date]</local-name>
+        <parent-name>[Sales Commission.csv]</parent-name>
+        <remote-alias>Order Date</remote-alias>
+        <ordinal>0</ordinal>
+        <local-type>datetime</local-type>
+        <aggregation>Year</aggregation>
+        <contains-null>true</contains-null>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Region</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Region]</local-name>
+        <parent-name>[Sales Commission.csv]</parent-name>
+        <remote-alias>Region</remote-alias>
+        <ordinal>1</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>1</scale>
+        <width>1073741823</width>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Sales Person</remote-name>
+        <remote-type>129</remote-type>
+        <local-name>[Sales Person]</local-name>
+        <parent-name>[Sales Commission.csv]</parent-name>
+        <remote-alias>Sales Person</remote-alias>
+        <ordinal>2</ordinal>
+        <local-type>string</local-type>
+        <aggregation>Count</aggregation>
+        <scale>1</scale>
+        <width>1073741823</width>
+        <contains-null>true</contains-null>
+        <collation flag='0' name='LEN_RUS' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+      <metadata-record class='column'>
+        <remote-name>Sales</remote-name>
+        <remote-type>20</remote-type>
+        <local-name>[Sales]</local-name>
+        <parent-name>[Sales Commission.csv]</parent-name>
+        <remote-alias>Sales</remote-alias>
+        <ordinal>3</ordinal>
+        <local-type>integer</local-type>
+        <aggregation>Sum</aggregation>
+        <contains-null>true</contains-null>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+      </metadata-record>
+    </metadata-records>
+  </connection>
+  <aliases enabled='yes' />
+  <column caption='Achievement (estimated)' datatype='integer' default-format='C1033%' name='[Achievement (copy)]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='[Sales]' scope-isolation='false' />
+  </column>
+  <column caption='Achieved Quota' datatype='string' name='[Achievement (variable) (copy)]' role='measure' type='nominal'>
+    <calculation class='tableau' formula='if SUM([Achievement (copy)]) &gt;= [Parameters].[New Quota] then &quot;100% +&quot;&#13;&#10;elseif SUM([Achievement (copy)]) &gt;= 0.75 * [Parameters].[New Quota] then &quot;75-100%&quot;&#13;&#10;elseif SUM([Achievement (copy)]) &gt;= 0.5 * [Parameters].[New Quota] then &quot;50-75%&quot;&#13;&#10;else &quot;Below 50%&quot; end' />
+  </column>
+  <column datatype='integer' default-format='C1033%' name='[Base (Variable)]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='[Parameters].[Base Salary]' />
+  </column>
+  <column caption='% of quota achieved' datatype='real' default-format='p0%' name='[Calculation_0440925131659539]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='AVG([Achievement (copy)])/[Parameters].[New Quota]' scope-isolation='false' />
+  </column>
+  <column caption='Rank over 3' datatype='real' name='[Calculation_4120925132203686]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='ROUND(INDEX() / 3 - 0.6,0) + 1'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column caption='Sort by field' datatype='real' name='[Calculation_8140925133029303]' role='measure' type='ordinal'>
+    <calculation class='tableau' formula='if [Parameters].[Parameter 1 1]=&quot;Names&quot; then 0&#13;&#10;elseif [Parameters].[Parameter 1 1]=&quot;% quota descending&quot; then -[Calculation_0440925131659539]&#13;&#10;else [Calculation_0440925131659539] end' />
+  </column>
+  <column datatype='real' default-format='C1033%' name='[Commission (Variable)]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='([Parameters].[Commission Rate]*[Sales])/100' scope-isolation='false' />
+  </column>
+  <column datatype='string' name='[Estimate Compensation label]' role='dimension' type='nominal'>
+    <calculation class='tableau' formula='&quot;Estimated Compensation:&quot;' />
+    <aliases>
+      <alias key='&quot;Estimated Compensation:&quot;' value='Estimated total compensation' />
+    </aliases>
+  </column>
+  <column datatype='real' default-format='C1033%' name='[OTE (Variable)]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='[Parameters].[Base Salary] + ([Parameters].[Commission Rate]*[Parameters].[New Quota])/100' />
+  </column>
+  <column datatype='integer' default-format='c&quot;$&quot;#,##0.00;(&quot;$&quot;#,##0.00)' name='[Sales]' role='measure' type='quantitative' />
+  <column datatype='real' default-format='C1033%' name='[Total Compensation]' role='measure' type='quantitative'>
+    <calculation class='tableau' formula='MIN([Base (Variable)]) + SUM([Commission (Variable)])' />
+  </column>
+  <column datatype='string' name='[Total Sales label]' role='dimension' type='nominal'>
+    <calculation class='tableau' formula='&quot;Total Sales:&quot;' />
+    <aliases>
+      <alias key='&quot;Total Sales:&quot;' value='Total' />
+    </aliases>
+  </column>
+  <_.fcp.ObjectModelTableType.true...column caption='Sales Commission' datatype='table' name='[__tableau_internal_object_id__].[Sales Commission.csv_4F66D485F1F148A299B285539B88B015]' role='measure' type='quantitative' />
+  <column-instance column='[Base (Variable)]' derivation='Min' name='[min:Base (Variable):qk]' pivot='key' type='quantitative' />
+  <column-instance column='[Commission (Variable)]' derivation='Sum' name='[sum:Commission (Variable):qk]' pivot='key' type='quantitative' />
+  <column-instance column='[Achievement (variable) (copy)]' derivation='User' name='[usr:Achievement (variable) (copy):nk]' pivot='key' type='nominal' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.690265' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.309735' show-structure='true' />
+  <style>
+    <style-rule element='mark'>
+      <encoding attr='color' field='[:Measure Names]' type='palette'>
+        <map to='#5f9ed1'>
+          <bucket>&quot;[federated.0a01cod1oxl83l1f5yves1cfciqo].[sum:Commission (Variable):qk]&quot;</bucket>
+        </map>
+        <map to='#898989'>
+          <bucket>&quot;[federated.0a01cod1oxl83l1f5yves1cfciqo].[min:Base (Variable):qk]&quot;</bucket>
+        </map>
+      </encoding>
+      <encoding attr='color' field='[usr:Achievement (variable) (copy):nk]' type='palette'>
+        <map to='#4e79a7'>
+          <bucket>&quot;50-75\%&quot;</bucket>
+        </map>
+        <map to='#59a14f'>
+          <bucket>&quot;Below 50\%&quot;</bucket>
+        </map>
+        <map to='#76b7b2'>
+          <bucket>&quot;100\% +&quot;</bucket>
+        </map>
+        <map to='#f28e2b'>
+          <bucket>&quot;75-100\%&quot;</bucket>
+        </map>
+      </encoding>
+    </style-rule>
+  </style>
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+  <datasource-dependencies datasource='Parameters'>
+    <column caption='Base Salary' datatype='integer' default-format='c&quot;$&quot;#,##0;(&quot;$&quot;#,##0)' name='[Base Salary]' param-domain-type='range' role='measure' type='quantitative' value='50000'>
+      <calculation class='tableau' formula='50000' />
+      <range granularity='1000' min='0' />
+    </column>
+    <column caption='Commission Rate' datatype='real' default-format='n#,##0.0&quot;%&quot;;-#,##0.0&quot;%&quot;' name='[Commission Rate]' param-domain-type='range' role='measure' type='quantitative' value='18.399999999999999'>
+      <calculation class='tableau' formula='18.399999999999999' />
+      <range granularity='0.10000000000000001' max='100.0' min='1.0' />
+    </column>
+    <column caption='New Quota' datatype='integer' default-format='c&quot;$&quot;#,##0,K;(&quot;$&quot;#,##0,K)' name='[New Quota]' param-domain-type='range' role='measure' type='quantitative' value='500000'>
+      <calculation class='tableau' formula='500000' />
+      <range granularity='25000' min='100000' />
+    </column>
+    <column caption='Sort by' datatype='string' name='[Parameter 1 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Names&quot;'>
+      <calculation class='tableau' formula='&quot;Names&quot;' />
+      <members>
+        <member value='&quot;\% quota ascending&quot;' />
+        <member value='&quot;\% quota descending&quot;' />
+        <member value='&quot;Names&quot;' />
+      </members>
+    </column>
+  </datasource-dependencies>
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='Sales Commission' id='Sales Commission.csv_4F66D485F1F148A299B285539B88B015'>
+        <properties context=''>
+          <relation connection='textscan.0bdqfzt0f0ynar1egmoso1fglwo7' name='Sales Commission.csv' table='[Sales Commission#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='datetime' name='Order Date' ordinal='0' />
+              <column datatype='string' name='Region' ordinal='1' />
+              <column datatype='string' name='Sales Person' ordinal='2' />
+              <column datatype='integer' name='Sales' ordinal='3' />
+            </columns>
+          </relation>
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>
