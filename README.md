@@ -7,6 +7,8 @@ The "Superstore Dashboard Recreation" project is an ambitious endeavor to recrea
 
 I undertook the recreation of this dashboard as a learning journey, aiming to grasp the advanced techniques employed in its design. My hope is that this guide serves as a valuable resource for those who are on the path to mastering Tableau and for individuals with a genuine enthusiasm for embracing new and challenging concepts.
 
+[Tableau Dasboard](https://public.tableau.com/views/SuperStoreDashboard_Recreated/Overview?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
 ## Key Features and Customizations
 
 - **Custom Visualizations:** The project introduces custom visualizations and data representations not present in the original dashboard, designed to enhance data understanding and insights.
